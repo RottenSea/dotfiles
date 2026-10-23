@@ -94,6 +94,6 @@ Templates also should not hardcode values that a tool auto-generates per machine
 
 ### Claude Desktop
 
-`Manual/Windows/Claude-Desktop/claude_desktop_config.json` holds the Claude Desktop preferences worth carrying to a new machine. The live file sits under `%LOCALAPPDATA%\Claude-Data\claude_<random>\`, a folder name that differs per install, and the app rewrites it often, so it can't be symlinked.
+`Manual/Windows/AppData/Local/Claude-Data/claude_INSTALL_ID/claude_desktop_config.json` holds the Claude Desktop preferences worth carrying to a new machine. Its path mirrors the live file under `%LOCALAPPDATA%`, with `claude_INSTALL_ID` standing in for the folder name that differs per install. The app rewrites the live file often, so it can't be symlinked.
 
 To apply it, quit Claude Desktop, merge these keys into the live `claude_desktop_config.json`, and start the app again. Replace `ACCOUNT_UUID` with the account ID already used as a key in the live file. Setting the same options in the app's Settings works too.
