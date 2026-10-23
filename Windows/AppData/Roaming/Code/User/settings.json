@@ -1,0 +1,106 @@
+{
+  // ================ Editor ================
+  "diffEditor.codeLens": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.colorDecorators": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSurroundingLines": 20,
+  "editor.folding": false,
+  "editor.fontFamily": "Maple Mono NL NF CN, sans-serif",
+  "editor.fontWeight": "500",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.guides.bracketPairs": true,
+  "editor.lightbulb.enabled": "off",
+  "editor.occurrencesHighlight": "multiFile",
+  "editor.selectionClipboard": false,
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.wordWrap": "on",
+  "editor.wrappingStrategy": "advanced",
+  "settingsSync.ignoredSettings": [
+    "-python.useEnvironmentsExtension",
+    "-python-envs.terminal.showActivateButton"
+  ],
+
+  // ================ Workbench / UI ================
+  "chat.disableAIFeatures": true,
+  "debug.showBreakpointsInOverviewRuler": true,
+  "extensions.ignoreRecommendations": true,
+  "markdown.preview.fontFamily": "Maple Mono NL NF CN, sans-serif",
+  "window.newWindowDimensions": "maximized",
+  "window.newWindowProfile": "Default",
+  "workbench.activityBar.location": "bottom",
+  "workbench.browser.openLocalhostLinks": false,
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#ffffff40",
+    "editor.wordHighlightBackground": "#ffffff20"
+  },
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.useModal": "off",
+  "workbench.experimental.modernUI": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.secondarySideBar.showLabels": false,
+  "workbench.tree.indent": 16,
+
+  // ================ Explorer / Files ================
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "files.associations": {
+    "*.jsonc": "json"
+  },
+  "files.autoGuessEncoding": true,
+
+  // ================ Terminal ================
+  "terminal.external.linuxExec": "kitty",
+  "terminal.external.windowsExec": "powershell.exe",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/usr/bin/bash"
+    }
+  },
+
+  // ================ Language-specific Formatters ================
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ================ Security ================
+  "http.systemCertificatesNode": true,
+  "security.workspace.trust.enabled": false,
+
+  // ================ Git ================
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+
+  // ================ Python ================
+  "python.terminal.useEnvFile": true,
+  "python.useEnvironmentsExtension": true,
+  "python-envs.terminal.showActivateButton": true,
+
+  // ================ Prettier ================
+  "prettier.singleAttributePerLine": true,
+  "prettier.trailingComma": "none",
+
+  // ================ Other Extensions ================
+  "codesnap.containerPadding": "0em",
+  "codesnap.roundedCorners": false,
+  "color-highlight.markRuler": false,
+  "errorLens.codeLensOnClick": "none",
+  "makefile.configureOnOpen": true,
+  "QoderCN.methodQuickOperation": false,
+  "redhat.telemetry.enabled": false,
+  "update.mode": "manual"
+}

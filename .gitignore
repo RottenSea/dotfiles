@@ -1,13 +1,24 @@
+# ============================================
+# Secret files materialized from .template
+# Only the .template is committed; the real file stays local.
+# ============================================
+
+# Linux
+Linux/.claude/settings.json
+# Retired to Legacy/, but an existing Linux checkout may still hold the real file
 Linux/.config/opencode/opencode.jsonc
 Linux/.config/zed/settings.json
 
-Windows/.config/opencode/opencode.jsonc
-Windows/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
-Windows/AppData/Roaming/Zed/settings.json
+# Windows
 Windows/.claude/settings.json
+Windows/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
 
-# Local copies of the secret files above, made by install.ps1 -Backup / install.sh --backup
+# ============================================
+# Local-only folders
+# ============================================
+
+# Copies of the secret files above, made by install.ps1 -Backup / install.sh --backup
 /backup/
 
-# Temp folder
-/Temp
+# Scratch folder
+/Temp/

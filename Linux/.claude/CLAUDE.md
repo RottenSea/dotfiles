@@ -1,9 +1,2 @@
-## Behavioral Constraints
-
-- Only execute actions explicitly requested by the user
-- Do not suggest new features, refactoring, or optimizations unless asked
-- Do not modify files not mentioned in the current request
-- Do not run commands beyond what the user specified
-- When instructions are ambiguous, ask for clarification instead of guessing
-- Do not modify anything unless explicitly told to modify
-
+- Never guess when a request leaves a decision, scope, or detail unresolved in a way that would change what you build. Call the Skill tool with "mattpocock-skills:grilling" and wait for the user's answer before proceeding.
+- Before presenting or saving any drafted documentation, article, or other prose meant to read as human-written, call the Skill tool with "humanizer:humanizer" to rewrite it and strip AI-writing patterns. Do this even for short drafts.

@@ -13,11 +13,11 @@ Cross-platform config for Linux and Windows, kept in one repo.
 
 ### Tools covered
 
+- Claude Code
 - Fastfetch
-- OpenCode
-- Zed
-- Windows Terminal
 - Windows PowerShell profile
+- VS Code
+- Windows Terminal
 
 ### Installing
 
@@ -43,11 +43,11 @@ It symlinks everything under `Windows/` into place under `%USERPROFILE%`, `%APPD
 
 ### Tools covered
 
-- Shell and core: `.bashrc`, `.bash_profile`, `.gitconfig`, `.npmrc`, `.prettierrc.json`
+- Shell and core: `.bashrc`, `.bash_profile`, `.bash_logout`, `.npmrc`
 - Terminal: Alacritty, Kitty
-- Editors: Zed, VS Code
+- Editor: VS Code
 - System and UI: Niri, XDG-Desktop-Portal, XFCE, Fastfetch, Fcitx5, Noctalia
-- AI and CLI: OpenCode, GitHub CLI
+- AI: Claude Code
 
 ### Installing
 
@@ -73,7 +73,7 @@ It symlinks everything under `Linux/` into place under `$HOME`, materializing an
 
 - `Linux/`: Linux configs and dotfiles.
 - `Windows/`: Windows configs, actively deployed via `install.ps1`.
-- `Legacy/`: retired configs kept for reference only, not installed or symlinked anywhere.
+- `Legacy/`: retired configs (OpenCode, Prettier, Zed) kept for reference only, not installed or symlinked anywhere.
 
 ## Secrets
 

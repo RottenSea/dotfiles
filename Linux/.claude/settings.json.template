@@ -1,49 +1,26 @@
 {
-  "autoConnectIde": false,
-  "autoDreamEnabled": false,
-  "autoMemoryEnabled": true,
-  "autoScrollEnabled": true,
-  "autoUpdatesChannel": "latest",
-  "awaySummaryEnabled": false,
   "cleanupPeriodDays": 3650,
-  "editorMode": "normal",
-  "effortLevel": "high",
-  "enableAllProjectMcpServers": true,
-  "enabledPlugins": {
-    "cloudflare@claude-plugins-official": false
-  },
-  "enableWorkflows": false,
-  "extraKnownMarketplaces": {
-    "claude-plugins-official": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/anthropics/claude-plugins-official.git"
-      }
-    },
-    "mattpocock": {
-      "source": {
-        "source": "git",
-        "url": "https://github.com/mattpocock/skills.git"
-      }
-    }
-  },
-  "remoteControlAtStartup": false,
-  "disableRemoteControl": true,
-  "skipWebFetchPreflight": true,
-  "crossSessionInbound": "accept",
   "env": {
     "BASH_MAX_TIMEOUT_MS": "240000",
-    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
     "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1",
     "CLAUDE_CODE_DISABLE_FAST_MODE": "1",
-    "DISABLE_AUTOUPDATER": "1",
-
-    "ENABLE_CLAUDEAI_MCP_SERVERS": "false",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
-    "DISABLE_TELEMETRY": "1",
-    "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_FEEDBACK_COMMAND": "1",
-    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+    "DISABLE_FEEDBACK_COMMAND": "1"
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "skillOverrides": {
+    "batch": "user-invocable-only",
+    "code-review": "user-invocable-only",
+    "security-review": "user-invocable-only",
+    "loop": "user-invocable-only",
+    "verify": "user-invocable-only",
+    "keybindings-help": "user-invocable-only",
+    "update-config": "user-invocable-only",
+    "anthropic-skills:setup-cowork": "user-invocable-only",
+    "anthropic-skills:consolidate-memory": "user-invocable-only",
+    "anthropic-skills:explain-usage": "user-invocable-only"
   },
   "hooks": {
     "PreToolUse": [
@@ -69,37 +46,58 @@
       }
     ]
   },
-  "outputStyle": "Explanatory",
-  "permissions": {
-    "defaultMode": "bypassPermissions"
-  },
-  "skillOverrides": {
-    "batch": "user-invocable-only",
-    "code-review": "user-invocable-only",
-    "security-review": "user-invocable-only",
-    "loop": "user-invocable-only",
-    "verify": "user-invocable-only",
-    "keybindings-help": "user-invocable-only",
-    "update-config": "user-invocable-only",
-    "anthropic-skills:setup-cowork": "user-invocable-only",
-    "anthropic-skills:consolidate-memory": "user-invocable-only",
-    "anthropic-skills:explain-usage": "user-invocable-only"
-  },
-  "inputNeededNotifEnabled": false,
-  "preferredNotifChannel": "notifications_disabled",
-  "promptSuggestionEnabled": false,
-  "showThinkingSummaries": true,
-  "skipDangerousModePermissionPrompt": true,
-  "spinnerTipsEnabled": false,
-  "statusLine": {
-    "command": "~/.claude/statusline.sh",
-    "type": "command"
-  },
-  "terminalProgressBarEnabled": false,
-  "theme": "dark",
-  "tui": "fullscreen",
-  "verbose": true,
   "worktree": {
     "baseRef": "head"
-  }
+  },
+  "disableRemoteControl": true,
+  "enableWorkflows": false,
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "enabledPlugins": {
+    "mattpocock-skills@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/anthropics/claude-plugins-official.git"
+      }
+    },
+    "humanizer": {
+      "source": {
+        "source": "github",
+        "repo": "blader/humanizer"
+      }
+    },
+    "academic-research-skills": {
+      "source": {
+        "source": "github",
+        "repo": "Imbad0202/academic-research-skills"
+      }
+    }
+  },
+  "outputStyle": "Explanatory",
+  "viewMode": "verbose",
+  "skipWebFetchPreflight": true,
+  "spinnerTipsEnabled": false,
+  "effortLevel": "high",
+  "promptSuggestionEnabled": false,
+  "awaySummaryEnabled": false,
+  "tui": "fullscreen",
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": false,
+  "showThinkingSummaries": true,
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "editorMode": "normal",
+  "verbose": true,
+  "preferredNotifChannel": "notifications_disabled",
+  "autoScrollEnabled": true,
+  "terminalProgressBarEnabled": false,
+  "remoteControlAtStartup": false,
+  "crossSessionInbound": "accept",
+  "inputNeededNotifEnabled": false,
+  "autoConnectIde": false
 }
