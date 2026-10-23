@@ -8,12 +8,14 @@ Cross-platform config for Linux and Windows, kept in one repo.
 - [Linux](#linux)
 - [Layout](#layout)
 - [Secrets](#secrets)
+- [Manual](#manual)
 
 ## Windows
 
 ### Tools covered
 
 - Claude Code
+- Claude Desktop (applied by hand, see [Manual](#manual))
 - Fastfetch
 - Windows PowerShell profile
 - VS Code
@@ -74,6 +76,7 @@ It symlinks everything under `Linux/` into place under `$HOME`, materializing an
 - `Linux/`: Linux configs and dotfiles.
 - `Windows/`: Windows configs, actively deployed via `install.ps1`.
 - `Legacy/`: retired configs (OpenCode, Prettier, Zed) kept for reference only, not installed or symlinked anywhere.
+- `Manual/`: configs the install scripts never touch. Apply them by hand on a new machine.
 
 ## Secrets
 
@@ -86,3 +89,11 @@ API keys and tokens never get committed. The repo uses a sanitized template patt
 Since real secret files are never committed, `.\install.ps1 -Backup` (Windows) / `./install.sh --backup` (Linux) copies them into `backup/`, mirroring their path under `Windows/`/`Linux/`. That folder is gitignored too. It's a local safety net, not a way to share secrets through the repo.
 
 Templates also should not hardcode values that a tool auto-generates per machine or per install (e.g. Windows Terminal profile GUIDs for shells it detects, WSL distro entries) — these differ across machines and change as tools are installed/removed. Let the tool regenerate them locally instead of committing a snapshot.
+
+## Manual
+
+### Claude Desktop
+
+`Manual/Windows/Claude-Desktop/claude_desktop_config.json` holds the Claude Desktop preferences worth carrying to a new machine. The live file sits under `%LOCALAPPDATA%\Claude-Data\claude_<random>\`, a folder name that differs per install, and the app rewrites it often, so it can't be symlinked.
+
+To apply it, quit Claude Desktop, merge these keys into the live `claude_desktop_config.json`, and start the app again. Replace `ACCOUNT_UUID` with the account ID already used as a key in the live file. Setting the same options in the app's Settings works too.

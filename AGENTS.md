@@ -6,6 +6,7 @@ Personal dotfiles for Windows and Linux. `install.ps1` and `install.sh` symlink 
 
 - `Windows/`, `Linux/`: deployed configs. A file's path under the platform folder is its path under the home directory. On Windows, `AppData/Roaming/`, `AppData/Local/` and `AppData/LocalLow/` map to `%APPDATA%`, `%LOCALAPPDATA%` and `%USERPROFILE%\AppData\LocalLow`.
 - `Legacy/`: retired configs kept for reference. The install scripts never read it.
+- `Manual/`: configs applied by hand. The install scripts never read it. A snapshot here keeps only settings the user chose: replace account IDs with `ACCOUNT_UUID` and leave out machine paths, device names and app state.
 - `backup/`: local copies of secret files. Gitignored.
 - `Temp/`: scratch space, including third-party configs kept for reference. Gitignored.
 

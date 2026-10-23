@@ -1,0 +1,31 @@
+{
+  "globalShortcut": "",
+  "preferences": {
+    "bypassPermissionsGateByAccount": {
+      "ACCOUNT_UUID": true
+    },
+    "bypassPermissionsOptInByAccount": {
+      "ACCOUNT_UUID": true
+    },
+    "ccdScheduledTasksEnabled": true,
+    "ccPromptSuggestions": false,
+    "ccRemoteControlDefaultEnabled": false,
+    "chicagoAutoUnhide": true,
+    "chicagoEnabled": true,
+    "chromeExtensionEnabled": false,
+    "coworkBrowserToolsEnabled": true,
+    "coworkModelAutoFallbackByAccount": {
+      "ACCOUNT_UUID": false
+    },
+    "coworkPreferredBrowser": "built_in",
+    "coworkScheduledTasksEnabled": true,
+    "coworkWebSearchEnabled": true,
+    "dictationShortcut": "off",
+    "dockBounceEnabled": true,
+    "epitaxyPrefs": {
+      "claude-code-preferred-editor": "vscode"
+    },
+    "launchEnabled": true,
+    "launchPreviewStorage": "shared"
+  }
+}
