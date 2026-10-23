@@ -25,26 +25,11 @@
   },
   "disableRemoteControl": true,
   "enableWorkflows": false,
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
-  },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
         "source": "git",
         "url": "https://github.com/anthropics/claude-plugins-official.git"
-      }
-    },
-    "humanizer": {
-      "source": {
-        "source": "github",
-        "repo": "blader/humanizer"
-      }
-    },
-    "academic-research-skills": {
-      "source": {
-        "source": "github",
-        "repo": "Imbad0202/academic-research-skills"
       }
     }
   },
