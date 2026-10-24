@@ -47,12 +47,13 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "editorMode": "normal",
-  "verbose": true,
   "preferredNotifChannel": "notifications_disabled",
   "autoScrollEnabled": true,
   "terminalProgressBarEnabled": false,
   "remoteControlAtStartup": false,
-  "crossSessionInbound": "accept",
+  "crossSessionInbound": "refuse",
   "inputNeededNotifEnabled": false,
-  "autoConnectIde": false
+  "autoConnectIde": false,
+  "idleCompaction": true,
+  "precomputeCompactionEnabled": false
 }
