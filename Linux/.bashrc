@@ -7,8 +7,7 @@
 
 mocha_green='\[\e[32m\]'
 reset='\[\e[0m\]'
-PS1="${mocha_green}[${reset}\u@\h \W${mocha_green}]${reset}\$ "
-
+PS1="\n${mocha_green}[${reset}\u@\h \W${mocha_green}]${reset}\n\$ "
 HISTCONTROL=ignoredups
 
 alias ls='ls --color=auto'
