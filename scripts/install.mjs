@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Links every file under Windows/ or Linux/ into the home directory, so editing a live config
 // edits the repo. A <name>.template is first copied to <name> inside the repo (gitignored, for
-// secrets), and <name> is linked. Run `node scripts/install.mjs --help` for the options.
+// secrets), and <name> is linked. Run `npm run setup -- --help` for the options.
 
 import { copyFileSync, existsSync, lstatSync, mkdirSync, readdirSync, readFileSync, readlinkSync, renameSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
@@ -11,7 +11,8 @@ import { parseArgs } from "node:util";
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const PLATFORMS = { win32: "Windows", linux: "Linux" };
 
-const HELP = `Usage: node scripts/install.mjs [option]
+const HELP = `Usage: npm run setup -- [option]
+   or: node scripts/install.mjs [option]
 
 Links every file under Windows/ or Linux/ (picked by the system it runs on) into the
 home directory. A link that already points at the repo is left alone. Anything else at

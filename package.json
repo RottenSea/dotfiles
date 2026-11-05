@@ -8,6 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "setup": "node scripts/install.mjs",
     "test": "node --test \"scripts/**/*.test.mjs\""
   }
 }

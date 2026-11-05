@@ -2,6 +2,8 @@
 
 Personal dotfiles for Windows and Linux. `node scripts/install.mjs` symlinks every file under `Windows/` or `Linux/`, picked by the running system, into the home directory. It needs Node 22 or later and no packages; `npm test` runs its tests in temporary folders.
 
+`npm run setup` runs the same script, with options after `--` (`npm run setup -- --dry-run`). Don't rename it to `install`: npm runs a script by that name on every `npm install`.
+
 ## Layout
 
 - `Windows/`, `Linux/`: deployed configs. A file's path under the platform folder is its path under the home directory. On Windows, `AppData/Roaming/`, `AppData/Local/` and `AppData/LocalLow/` map to `%APPDATA%`, `%LOCALAPPDATA%` and `%USERPROFILE%\AppData\LocalLow`.
