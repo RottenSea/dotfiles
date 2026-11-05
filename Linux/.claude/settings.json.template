@@ -3,10 +3,24 @@
   "env": {
     "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1",
     "CLAUDE_CODE_DISABLE_FAST_MODE": "1",
-    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_FORK_SUBAGENT": "0"
   },
   "permissions": {
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "bypassPermissions",
+    "deny": [
+      "mcp__ccd_session__*",
+      "mcp__ccd_session_mgmt__*",
+      "mcp__ccd_settings__*",
+      "mcp__ccd_connectors__*",
+      "mcp__ccd_directory__*",
+      "mcp__ccd_host__*",
+      "mcp__ccd_pr__*",
+      "mcp__ccd_sidebar__*",
+      "mcp__ccd_turn__*",
+      "mcp__ccd_view__*",
+      "mcp__ccd_window__*"
+    ]
   },
   "skillOverrides": {
     "batch": "user-invocable-only",
@@ -33,7 +47,6 @@
       }
     }
   },
-  "outputStyle": "Explanatory",
   "viewMode": "verbose",
   "skipWebFetchPreflight": true,
   "spinnerTipsEnabled": false,
@@ -45,15 +58,11 @@
   "autoDreamEnabled": false,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "editorMode": "normal",
   "preferredNotifChannel": "notifications_disabled",
-  "autoScrollEnabled": true,
   "terminalProgressBarEnabled": false,
-  "remoteControlAtStartup": false,
   "crossSessionInbound": "refuse",
   "inputNeededNotifEnabled": false,
-  "autoConnectIde": false,
-  "idleCompaction": true,
-  "precomputeCompactionEnabled": false
+  "precomputeCompactionEnabled": false,
+  "feedbackSurveyRate": 0,
+  "switchModelsOnFlag": false
 }

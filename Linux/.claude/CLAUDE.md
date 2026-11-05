@@ -1,2 +1,3 @@
+- Prefer explanations in Chinese.
 - Never guess when a request leaves a decision, scope, or detail unresolved in a way that would change what you build. Call the Skill tool with "mattpocock-skills:grilling" and wait for the user's answer before proceeding.
 - Before presenting or saving any drafted documentation, article, or other prose meant to read as human-written, call the Skill tool with "humanizer:humanizer" to rewrite it and strip AI-writing patterns. Do this even for short drafts.
