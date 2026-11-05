@@ -3,7 +3,10 @@
   "env": {
     "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1",
     "CLAUDE_CODE_DISABLE_FAST_MODE": "1",
-    "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_ENABLE_TASKS": "0",
+    "CLAUDE_CODE_ENABLE_TODO_TOOLS": "0",
+    "CLAUDE_CODE_FORK_SUBAGENT": "0"
   },
   "permissions": {
     "defaultMode": "bypassPermissions"
@@ -33,7 +36,6 @@
       }
     }
   },
-  "outputStyle": "Explanatory",
   "viewMode": "verbose",
   "skipWebFetchPreflight": true,
   "spinnerTipsEnabled": false,
@@ -45,15 +47,11 @@
   "autoDreamEnabled": false,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
-  "theme": "dark",
-  "editorMode": "normal",
   "preferredNotifChannel": "notifications_disabled",
-  "autoScrollEnabled": true,
   "terminalProgressBarEnabled": false,
-  "remoteControlAtStartup": false,
   "crossSessionInbound": "refuse",
   "inputNeededNotifEnabled": false,
-  "autoConnectIde": false,
-  "idleCompaction": true,
-  "precomputeCompactionEnabled": false
+  "precomputeCompactionEnabled": false,
+  "feedbackSurveyRate": 0,
+  "switchModelsOnFlag": false
 }

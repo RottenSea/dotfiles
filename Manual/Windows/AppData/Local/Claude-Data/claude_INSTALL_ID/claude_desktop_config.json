@@ -8,10 +8,12 @@
       "ACCOUNT_UUID": true
     },
     "ccdScheduledTasksEnabled": true,
+    "ccNewTaskPrompt": "here",
+    "ccNextActions": false,
     "ccPromptSuggestions": false,
     "ccRemoteControlDefaultEnabled": false,
     "chicagoAutoUnhide": true,
-    "chicagoEnabled": true,
+    "chicagoEnabled": false,
     "chromeExtensionEnabled": false,
     "coworkBrowserToolsEnabled": true,
     "coworkModelAutoFallbackByAccount": {
@@ -25,6 +27,8 @@
     "epitaxyPrefs": {
       "claude-code-preferred-editor": "vscode"
     },
+    "keepAwakeEnabled": true,
+    "launchAutoOpenFiles": true,
     "launchEnabled": true,
     "launchPreviewStorage": "shared"
   }
