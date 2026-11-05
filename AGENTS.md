@@ -1,10 +1,11 @@
 # Agent notes for this repo
 
-Personal dotfiles for Windows and Linux. `node install.mjs` symlinks every file under `Windows/` or `Linux/`, picked by the running system, into the home directory. It needs Node 22 or later and no packages; `npm test` runs its tests in temporary folders.
+Personal dotfiles for Windows and Linux. `node scripts/install.mjs` symlinks every file under `Windows/` or `Linux/`, picked by the running system, into the home directory. It needs Node 22 or later and no packages; `npm test` runs its tests in temporary folders.
 
 ## Layout
 
 - `Windows/`, `Linux/`: deployed configs. A file's path under the platform folder is its path under the home directory. On Windows, `AppData/Roaming/`, `AppData/Local/` and `AppData/LocalLow/` map to `%APPDATA%`, `%LOCALAPPDATA%` and `%USERPROFILE%\AppData\LocalLow`.
+- `scripts/`: `install.mjs` and its tests (`*.test.mjs`, run by `npm test`).
 - `Legacy/`: retired configs kept for reference. The install scripts never read it.
 - `Manual/`: configs applied by hand. The install scripts never read it. Paths mirror the home directory the same way as under `Windows/` and `Linux/`; a folder name that differs per install becomes an uppercase placeholder such as `claude_INSTALL_ID`. A snapshot here keeps only settings the user chose: replace account IDs with `ACCOUNT_UUID` and leave out machine paths, device names and app state.
 - `backup/`: local copies of secret files. Gitignored.
@@ -14,7 +15,7 @@ Personal dotfiles for Windows and Linux. `node install.mjs` symlinks every file 
 
 Every deployed file is a symlink back into this repo, so editing a live config edits the repo file. Check `git diff` after changing an app's settings.
 
-Some apps (VS Code among them) save over the link with a plain file, and later changes stop reaching the repo. `node install.mjs --dry-run` reports each such file. Copy the live file into the repo, then run `node install.mjs` to link it again.
+Some apps (VS Code among them) save over the link with a plain file, and later changes stop reaching the repo. `node scripts/install.mjs --dry-run` reports each such file. Copy the live file into the repo, then run `node scripts/install.mjs` to link it again.
 
 ## Secrets and templates
 
@@ -28,7 +29,7 @@ A config that holds a secret is committed as `<name>.template`, with placeholder
 
 Move it under `Legacy/` at the same relative path (`git mv Windows/x Legacy/Windows/x`). For a template-managed config, also:
 
-1. Turn the live symlink into a standalone file first (read the bytes, delete the link, write the bytes back, as `node install.mjs --revert` does), so the app keeps its settings.
+1. Turn the live symlink into a standalone file first (read the bytes, delete the link, write the bytes back, as `node scripts/install.mjs --revert` does), so the app keeps its settings.
 2. Move the gitignored real file into `backup/<platform>/<same path>`. If it stays in the platform folder, the next install links it as a regular file.
 
 To delete a config outright, remove its live symlink too, or the link dangles.

@@ -16,7 +16,7 @@ Cross-platform config for Linux and Windows, kept in one repo.
 Install [Node.js](https://nodejs.org/) 22 or later first. Then, from the repo root:
 
 ```bash
-node install.mjs
+node scripts/install.mjs
 ```
 
 The script picks `Windows/` or `Linux/` by the system it runs on and symlinks every file in it into the home directory: `$HOME` on Linux, `%USERPROFILE%` on Windows, where `AppData/Roaming/`, `AppData/Local/` and `AppData/LocalLow/` go to `%APPDATA%`, `%LOCALAPPDATA%` and `%USERPROFILE%\AppData\LocalLow`. A `.template` file is first copied to the same name without `.template`, inside the repo, and that copy is linked. See [Secrets](#secrets).
@@ -27,10 +27,10 @@ On Windows, creating symlinks needs Developer Mode (Settings → System → For 
 
 | Command | What it does |
 | --- | --- |
-| `node install.mjs` | Link everything (default). |
-| `node install.mjs --revert` | Turn every managed symlink back into a standalone file with the same content. The repo is untouched; the files just stop tracking it. |
-| `node install.mjs --backup` | Copy the local secret files (made from `.template`, listed in `.gitignore`) into `backup/<platform>/`, at their path under the platform folder. Only touches files inside the repo. See [Secrets](#secrets). |
-| `node install.mjs --dry-run` | Print what the command would do without changing anything. Add it to any command above. |
+| `node scripts/install.mjs` | Link everything (default). |
+| `node scripts/install.mjs --revert` | Turn every managed symlink back into a standalone file with the same content. The repo is untouched; the files just stop tracking it. |
+| `node scripts/install.mjs --backup` | Copy the local secret files (made from `.template`, listed in `.gitignore`) into `backup/<platform>/`, at their path under the platform folder. Only touches files inside the repo. See [Secrets](#secrets). |
+| `node scripts/install.mjs --dry-run` | Print what the command would do without changing anything. Add it to any command above. |
 
 `--revert` and `--backup` can't be used together. `npm test` runs the script's tests in temporary folders.
 
@@ -57,7 +57,7 @@ On Windows, creating symlinks needs Developer Mode (Settings → System → For 
 
 ## Layout
 
-- `install.mjs`: the install script. Its tests are in `test/`.
+- `scripts/`: the install script, `install.mjs`, and its tests.
 - `Linux/`: Linux configs and dotfiles.
 - `Windows/`: Windows configs.
 - `Legacy/`: retired configs (OpenCode, Prettier, Zed) kept for reference only, not installed or symlinked anywhere.
@@ -71,7 +71,7 @@ API keys and tokens never get committed. The repo uses a sanitized template patt
 - A redacted copy with the same name plus `.template` is committed. Placeholders like `YOUR_TOKEN` mark where secrets go.
 - On a new machine, copy the template to its real path and fill in your own values.
 
-Since real secret files are never committed, `node install.mjs --backup` copies them into `backup/`, mirroring their path under `Windows/` or `Linux/`. That folder is gitignored too. It's a local safety net, not a way to share secrets through the repo.
+Since real secret files are never committed, `node scripts/install.mjs --backup` copies them into `backup/`, mirroring their path under `Windows/` or `Linux/`. That folder is gitignored too. It's a local safety net, not a way to share secrets through the repo.
 
 Templates also should not hardcode values that a tool auto-generates per machine or per install (e.g. Windows Terminal profile GUIDs for shells it detects, WSL distro entries) — these differ across machines and change as tools are installed/removed. Let the tool regenerate them locally instead of committing a snapshot.
 

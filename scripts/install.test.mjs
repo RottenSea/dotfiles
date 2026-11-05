@@ -3,7 +3,7 @@ import { existsSync, lstatSync, mkdirSync, mkdtempSync, readdirSync, readFileSyn
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { after, beforeEach, describe, test } from "node:test";
-import { backup, install, managedFiles, revert, state, targetPath } from "../install.mjs";
+import { backup, install, managedFiles, revert, state, targetPath } from "./install.mjs";
 
 const temp = mkdtempSync(join(tmpdir(), "dotfiles-"));
 after(() => rmSync(temp, { recursive: true, force: true }));
