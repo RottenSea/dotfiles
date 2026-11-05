@@ -17,7 +17,7 @@ Windows/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalStat
 # Local-only folders
 # ============================================
 
-# Copies of the secret files above, made by install.ps1 -Backup / install.sh --backup
+# Copies of the secret files above, made by node install.mjs --backup
 /backup/
 
 # Scratch folder

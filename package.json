@@ -1,0 +1,13 @@
+{
+  "name": "dotfiles",
+  "private": true,
+  "description": "Config for Windows and Linux, linked into the home directory.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
+  }
+}
