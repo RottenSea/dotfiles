@@ -43,6 +43,9 @@
   "workbench.colorTheme": "Dracula Theme",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.useModal": "off",
+  "workbench.editorAssociations": {
+    "*.md": "vscode.markdown.preview.editor"
+  },
   "workbench.experimental.modernUI": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
