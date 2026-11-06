@@ -52,7 +52,7 @@ On Windows, creating symlinks needs Developer Mode (Settings → System → For 
 ### Tools covered
 
 - Shell and core: `.bashrc`, `.bash_profile`, `.bash_logout`, `.npmrc`
-- Terminal: Alacritty, Kitty
+- Terminal: Kitty
 - Editor: VS Code
 - System and UI: Niri, XDG-Desktop-Portal, XFCE, Fastfetch, Fcitx5, Noctalia
 - AI: Claude Code
@@ -62,7 +62,7 @@ On Windows, creating symlinks needs Developer Mode (Settings → System → For 
 - `scripts/`: the install script, `install.mjs`, and its tests.
 - `Linux/`: Linux configs and dotfiles.
 - `Windows/`: Windows configs.
-- `Legacy/`: retired configs (OpenCode, Prettier, Zed) kept for reference only, not installed or symlinked anywhere.
+- `Legacy/`: retired configs (Alacritty, OpenCode, Prettier, Zed) kept for reference only, not installed or symlinked anywhere.
 - `Manual/`: configs the install scripts never touch. Apply them by hand on a new machine.
 
 ## Secrets
