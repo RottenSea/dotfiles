@@ -4,22 +4,23 @@
     "CLAUDE_CODE_DISABLE_ADVISOR_TOOL": "1",
     "CLAUDE_CODE_DISABLE_FAST_MODE": "1",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "ENABLE_PROMPT_CACHING_1H": "1",
     "CLAUDE_CODE_FORK_SUBAGENT": "0"
   },
   "permissions": {
     "defaultMode": "bypassPermissions",
     "deny": [
-      "mcp__ccd_session__*",
-      "mcp__ccd_session_mgmt__*",
-      "mcp__ccd_settings__*",
-      "mcp__ccd_connectors__*",
-      "mcp__ccd_directory__*",
-      "mcp__ccd_host__*",
-      "mcp__ccd_pr__*",
-      "mcp__ccd_sidebar__*",
-      "mcp__ccd_turn__*",
-      "mcp__ccd_view__*",
-      "mcp__ccd_window__*"
+      "mcp__ccd_session",
+      "mcp__ccd_session_mgmt",
+      "mcp__ccd_settings",
+      "mcp__ccd_connectors",
+      "mcp__ccd_directory",
+      "mcp__ccd_host",
+      "mcp__ccd_pr",
+      "mcp__ccd_sidebar",
+      "mcp__ccd_turn",
+      "mcp__ccd_view",
+      "mcp__ccd_window"
     ]
   },
   "skillOverrides": {
@@ -30,9 +31,9 @@
     "verify": "user-invocable-only",
     "keybindings-help": "user-invocable-only",
     "update-config": "user-invocable-only",
-    "anthropic-skills:setup-cowork": "user-invocable-only",
-    "anthropic-skills:consolidate-memory": "user-invocable-only",
-    "anthropic-skills:explain-usage": "user-invocable-only"
+    "setup-cowork": "user-invocable-only",
+    "consolidate-memory": "user-invocable-only",
+    "explain-usage": "user-invocable-only"
   },
   "worktree": {
     "baseRef": "head"
