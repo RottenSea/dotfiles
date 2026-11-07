@@ -1,2 +1,3 @@
 - Prefer explanations in Chinese.
 - Commit changes without asking.
+- Ask before pushing.
