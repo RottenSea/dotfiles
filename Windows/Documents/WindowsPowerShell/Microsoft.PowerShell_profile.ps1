@@ -20,6 +20,12 @@ if ($PWD.Path -in $defaultPaths)
 
 Clear-Host
 
+# fnm
+if (Get-Command fnm -ErrorAction SilentlyContinue)
+{
+    fnm env --use-on-cd --shell powershell | Out-String | Invoke-Expression
+}
+
 # Fastfetch
 if (Get-Command fastfetch -ErrorAction SilentlyContinue)
 {
